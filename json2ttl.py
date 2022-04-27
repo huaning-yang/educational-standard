@@ -50,6 +50,7 @@ def buildGraph():
                 for cc in c['children']:
                     cc_url = child_url + "/" + cc['id']
                     g.add((child_url, SKOS.topConceptOf, Literal(cc_url)))
+                    g.add((cc_url, RDF.type, SKOS.Concept))
                     g.add((cc_url, SKOS.hasTopConcept, Literal(child_url)))
                     g.add((cc_url, SKOS.prefLabel, Literal(cc['title'])))
                     if "description" in cc:
@@ -59,6 +60,7 @@ def buildGraph():
                         for ccc in cc['children']:
                             ccc_url = cc_url + "/" + ccc['id']
                             g.add((cc_url, SKOS.topConceptOf, Literal(ccc_url)))
+                            g.add((ccc_url, RDF.type, SKOS.Concept))
                             g.add((ccc_url, SKOS.hasTopConcept, Literal(cc_url)))
                             g.add((ccc_url, SKOS.prefLabel, Literal(ccc['title'])))
                             if "description" in ccc:
@@ -68,6 +70,7 @@ def buildGraph():
                                     for cccc in ccc['children']:
                                         cccc_url = ccc_url + "/" + cccc['id']
                                         g.add((ccc_url, SKOS.topConceptOf, Literal(cccc_url)))
+                                        g.add((cccc_url, RDF.type, SKOS.Concept))
                                         g.add((cccc_url, SKOS.hasTopConcept, Literal(ccc_url)))
                                         g.add((cccc_url, SKOS.prefLabel, Literal(cccc['title'])))
                                         if "description" in cccc:
