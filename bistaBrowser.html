@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Bildungsstandards</title>
+		<link rel="stylesheet" href="bistaBrowser.css"/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+		<script src="bistaBrowser.js"></script>
+
+		<script src="dataMaSek1.js"></script>
+		<script src="dataDeSek1.js"></script>
+		<script src="dataEnFrSek1.js"></script>
+		<script src="dataMaPrimar.js"></script>
+		<script src="dataDePrimar.js"></script>
+		<script src="dataBioSek1.js"></script>
+		<script src="dataCheSek1.js"></script>
+	</head>
+	<body>
+		<div class="header">
+			Bildungsstandards 2004/2005
+		</div>
+		<div class="main-navi">
+			<button onclick="loadData('dataMaPrimar')">Mathematik Primar</button>
+			<button onclick="loadData('dataMaSek1')">Mathematik Sek1</button>
+			<button onclick="loadData('dataDePrimar')">Deutsch Primar</button>
+			<button onclick="loadData('dataDeSek1')">Deutsch Sek1</button>
+			<button onclick="loadData('dataEnFrSek1')">Fremdsprachen Sek1</button>
+			<button onclick="loadData('dataBioSek1')">Biologie Sek1</button>
+			<button onclick="loadData('dataCheSek1')">Chemie Sek1</button>
+		</div>
+		<div class="prompt">
+		</div>
+		<div class="data-tree">
+			<div id="d3host">
+			</div>
+			<div class="details">
+			</div>
+		</div>
+		<div class="path">
+		</div>
+		<div class="description">
+		</div>
+	</body>
+</html>

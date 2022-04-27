@@ -1,0 +1,107 @@
+body {
+	font-family: Helvetica Neue,sans-serif;
+	margin: 0;
+	width: 100%;
+}
+
+.header {
+	width: calc(100% - 30px);
+	padding: 15px;
+	background-color: #353563;
+	display: flex;
+	justify-content: center;
+	font-size: large;
+	font-weight: bold;
+	color: white;
+}
+.main-navi {
+	width: calc(100% - 30px);
+	padding: 15px;
+	background-color: slategrey;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.main-navi button {
+	flex: none;
+	padding: 5px 20px;
+}
+
+.data-tree {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	font-size: smaller;
+}
+
+#d3host {
+	flex: 0 0 800px;
+}
+
+.details {
+	flex: 1 1 auto;
+	overflow-x: auto;
+	height: 500px;
+}
+
+.details ul{
+	list-style: none;
+	padding-left: 0;
+	margin-left: 10px;
+}
+
+.details ul li{
+	margin-top: 4px;
+}
+
+.details ul ul{
+	padding-left: 0;
+	margin-left: 15px;
+	list-style: circle;
+}
+
+.details ul ul li{
+	margin-top: 0;
+}
+
+.path {
+	width: calc(100% - 20px);
+	padding: 10px;
+	background-color: #aacdea;
+	font-size: larger;
+}
+
+.description {
+	width: calc(100% - 20px);
+	padding: 10px;
+	background-color: #c6d5e1;
+}
+
+.node {
+	cursor: pointer;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 3px;
+}
+
+.node text {
+  font: 12px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 2px;
+}
+
+.prompt {
+	padding: 10px;
+	background-color: #c6d5e1;
+	font-style: italic;
+	font-size: smaller;
+}
