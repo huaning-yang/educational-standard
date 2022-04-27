@@ -38,7 +38,7 @@ jobs:
         run: pip install rdflib
 
       - name: build the data dir
-        run: python json2ttl.py jsonEnFrSek1.json
+        run: python json2ttl.py jsonDeSek1.json
 
       - name: make .env.production file
         run: echo "BASEURL=/${{ github.event.repository.name }}" > .env.production
