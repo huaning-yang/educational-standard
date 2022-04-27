@@ -48,7 +48,7 @@ jobs:
         run: docker run -v $(pwd)/public:/app/public -v $(pwd)/data:/app/data -v $(pwd)/.env.production:/app/.env.production skohub/skohub-vocabs-docker:latest
 
       # this creates the gh-pages branch, because publish_branch default value = 'gh-pages'
-      - name:  Deploy
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
